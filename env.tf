@@ -3,11 +3,12 @@ resource "aws_elastic_beanstalk_environment" "cand1-uat-env" {
   application         = "${aws_elastic_beanstalk_application.cand1-app.name}"
   solution_stack_name = "64bit Amazon Linux 2018.03 v2.11.7 running Multi-container Docker 18.06.1-ce (Generic)"
   tier                = "WebServer"
-  cname               = ""
-  decription          = "UAT environment for the candidate app deployment"
-  wait_for_ready_timeout = 30m
-  version_label = "1"
+  #cname               = ""
+  description          = "UAT environment for the candidate app deployment"
+  wait_for_ready_timeout = "30m"
+  # version_label = "1"
 
+# virtual prrivate cloud setting
   setting {
     namespace = "aws:ec2:vpc"
     name      = "VPCId"
@@ -25,6 +26,7 @@ resource "aws_elastic_beanstalk_environment" "cand1-uat-env" {
      name      = "AssociatePublicIpAddress"
      value     = "true"
   }
+  # ami image setting to launch
   setting {
      namespace = "aws:autoscaling:launchconfiguration"
      name = "InstanceType"
@@ -70,6 +72,8 @@ resource "aws_elastic_beanstalk_environment" "cand1-uat-env" {
     name      = "RootVolumeSize"
     value     = "10"
   }
+
+  #environment setting
   setting {
     namespace = "aws:elasticbeanstalk:environment"
     name = "EnvironmentType"
@@ -79,4 +83,5 @@ resource "aws_elastic_beanstalk_environment" "cand1-uat-env" {
     namespace = "aws:elasticbeanstalk:environment"
     name = "LoadBalancerType"
     value = "application"
+  }
   }

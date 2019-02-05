@@ -1,0 +1,9 @@
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-configuration-methods-after.html#configuration-options-remove-awscli
+- create s3 bucket for the elasticbeanstalk
+
+$ aws elasticbeanstalk create-storage-location
+{
+    "S3Bucket": "elasticbeanstalk-us-west-2-123456789012"
+}
+
+- above is using the aws cli but use terraform to create one

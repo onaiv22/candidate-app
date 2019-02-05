@@ -22,6 +22,6 @@ This prroject will be running each components using docker containers. The EB wi
 
 Management Tools:
  - docker container for docker-registry
- - docker container for letsencrypt (ca) expires every  90days
+ - docker container for letsencrypt (ca).
  - docker container for jenkins  (jenkinsfile - cicd pipeline process)
  - SCM will be github

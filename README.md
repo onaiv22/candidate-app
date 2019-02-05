@@ -1,3 +1,15 @@
+AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.
+
+You can simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring. At the same time, you retain full control over the AWS resources powering your application and can access the underlying resources at any time.
+
+So in this project I will be accessing and reconfiguring some of the underlying resource from using defaults to desired resources.
+
+I will be be using packer to bake the ami-image adherring to cis standards.
+I also will creating my own vpc and subnets as against the defaults.
+I will also be creating a bastion server for SSHSourceRestriction and creating a rule for this
+I might be using some more configuration inside a config.json file which will contain certain desired configurations.
+
+shorthands in notes:
 def EB = "{elasticbeanstalk}"
 def SCM = "{source-code-management}"
 

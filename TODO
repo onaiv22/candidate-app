@@ -3,7 +3,8 @@
 - deploy jenkins and docker registry containers to the Environment
 - deploy a bastion server for admin (femi, dare and akin)
 - remember to configure loging of individual containers
-- create a folder to put dockerfile and dependencies for each environment in
+- create a folder to put dockerfile and dependencies for each environment in/
+  create s3 bucket for the project
 - zip up the file
 - find an automated  way to upload the zipped files into elasticbeanstalk
 

@@ -1,3 +1,12 @@
+- use variables more so deployment to different environment using modules.
+- configure backend for the project
+- deploy jenkins and docker registry containers to the Environment
+- deploy a bastion server for admin (femi, dare and akin)
+- remember to configure loging of individual containers
+- create a folder to put dockerfile and dependencies for each environment in
+- zip up the file
+- find an automated  way to upload the zipped files into elasticbeanstalk
+
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-configuration-methods-after.html#configuration-options-remove-awscli
 - create s3 bucket for the elasticbeanstalk
 
@@ -7,3 +16,5 @@ $ aws elasticbeanstalk create-storage-location
 }
 
 - above is using the aws cli but use terraform to create one
+-Here is where i got options to configure for
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalinglaunchconfiguration
